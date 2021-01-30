@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+        <script>
+            //Funções nativas são métodos e propriedades nativas do JS que podem ser ultilizadas de maneira rápida para realizar algum evento
+            //Exemplos de Funções nativas de strings
+            
+            var exemplo = 'Paulo Henrique'
+            var exemplo2 = 'Natalia Borges'
+            var exemplo3 = '   Isabella Cristine   '
+
+            //length,uma propriedade usada para recuperar a quantidade de caracteres de uma string
+
+            document.write(exemplo.length)
+            document.write('<br>')
+
+            //Indexof() retorna o index da primeira ocorrência de algum string,ou caractere
+
+            document.write(exemplo.indexOf('H'))
+            document.write('<br>')
+            document.write(exemplo.search('Henrique'))
+            document.write('<br>')
+            //slice() como o nome ja diz corta a string
+            document.write(exemplo.slice(6,14))
+            document.write('<br>')
+            //substr() é igual o slice porém no segundo parâmetro coloca-se o tamanho da parte a ser cortada
+            document.write(exemplo.substr(6,8))
+            document.write('<br>')
+            //toUpperCase e toLowerCase são métodos para transformar a string em letra maiúscula e minúscula respectivamente
+            document.write(exemplo.toUpperCase())
+            document.write('<br>')
+            document.write(exemplo.toLowerCase())
+            document.write('<br>')
+            //Concat() metodo para concatenar strings
+            document.write(exemplo.concat(' - ',exemplo2))
+            document.write('<br>')
+            //trim() remove os espaços de ambos os lados da string
+            document.write(exemplo3.trim())
+            document.write('<br>')
+            //charAt() retorna um caractere de uma string e um determinado index passado nos seus parâmetros
+            document.write(exemplo.charAt(0))
+
+
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

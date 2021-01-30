@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+        <script>
+            
+            //Abaixo temos um exemplo de função callback são elas callbackSucesso e callbackErro
+
+            function exibirArtigo (id, callbackSucesso, callbackErro){
+                if(true){
+                    callbackSucesso('Sucesso','O artigo foi recuperado com sucesso!')
+                } else{
+                    callbackErro('O artigo não obteve sucesso.')
+                }
+            }
+
+            //A baixo temos um exemplo do uso da técnica Wrapper tornando a função anônima
+
+            var callbackSucesso = function(titulo, descricao){
+                document.write('<h1>'+ titulo + '</h1>')
+                document.write('<br />')
+                document.write('<p>'+ descricao + '</p>')
+            }
+
+            //A técnica de Wrapper consiste em inserir uma função anônima dentro de uma variável, dessa forma limpando o código
+
+            var callbackErro = function(titulo){
+                document.write('<p><b>Erro: '+ titulo + '</b></p>')
+            }
+
+            exibirArtigo(2,callbackSucesso,callbackErro)
+
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções - JS</title>
+    <script>
+        //Função é um subprograma,criado para facilitar reutilização de código e organização do mesmo
+        //Função e definida pela palavra reservada Function,depois da-se um nome como a uma váriavel 
+        //Em seguida os parâmetros vão entre parênteses (),o mesmo pode ter infinitos parâmetros,e a ordem importa
+        //As váriaveis dentro de uma função é definida como escopo da Função
+        function caucularTerrreno (largura, altura){
+
+            //Lógica
+            var area = largura * altura
+
+            //A dois tipos de Retornos para as funções 
+            //Void : não retorna nenhum dado para o script que o chama
+            //Return : retorna algum dado,entre eles números,string's,váriaveis,operações...
+            return area
+        }
+
+        //Retorno com o nome da função completo
+        document.write('Retorno com nome completo: '+caucularTerrreno(10,10))
+
+        //Retorno com apenas a variavel especificada
+        //Primeiro atribuo a função a uma variavel, sim é possivel
+        var area = caucularTerrreno(10,10)
+        document.write('<br>')
+        document.write('Retorno com variavel especificada: '+area)
+
+        //Retorno com entrada de dados feitas pelo usuário
+        //Vou criar uma nova função para não confundir com as anteriores 
+        
+        function multiplicarNumeros (numA, numB){
+            var resultado = numA * numB
+            return resultado
+        }
+
+        var numA = prompt('Digite o primeiro valor: ')
+        var numB = prompt('Digite o segundo valor: ')
+        var resultado = multiplicarNumeros(numA, numB)
+
+        document.write('<br>')
+
+        document.write('Retorno com entrada de dados pelo usuário: ' + resultado)
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
