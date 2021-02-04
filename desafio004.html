@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cauculadora Simples</title>
+        <script>
+
+            var num1 = prompt('Digite um número: ')
+            var operacao = prompt('Digite a operação <soma> ou <subtração>')
+            var num2 = prompt('Digite o segundo número: ')
+
+            function cauculadora (num1,operacao,num2){
+                if (operacao == 'soma'){
+                    var resultado = num1 + num2
+                }
+                else if (operacao == 'subtração'){
+                    var resultado = num1 - num2
+                }
+                else{
+                    document.write('Valor digitado inválido')
+                }
+                return resultado
+            }
+
+            var resultado = cauculadora(parseInt(num1),operacao,parseInt(num2))
+
+            document.write('O resultado é : ' + resultado)
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
