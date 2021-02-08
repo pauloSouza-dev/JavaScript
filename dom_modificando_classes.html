@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+        <script>
+            function modificarClasse(){
+                document.getElementById('quadrado').className = 'format2'
+            }
+
+            function restaurarClasse(){
+                document.getElementById('quadrado').className = 'format1'
+            }
+        </script>
+        <style>
+            .format1{
+                background: green;
+                font: #FFF;
+            }
+
+            .format2{
+                background: blueviolet;
+                font: #FFF;
+                height: 200px;
+                font-size: 40px;
+                padding: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="format1" id="quadrado">Modificando Classe de uma div</div>
+        <hr>
+        <button type="button" onclick='modificarClasse()'>Modificar Classe</button>
+        <button type="button" onclick='restaurarClasse()'>Restaurar Classe</button>
+    </body>
+</html>

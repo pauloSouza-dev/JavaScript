@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+        <script>
+            function botaoFocado(){
+                document.getElementById('botaoTeste').style.background = 'yellow'
+            }
+
+            function botaoDesfocado(){
+                var valorBotao = document.getElementById('botaoTeste').value
+                var quantidadeChar = valorBotao.length
+                
+                if(quantidadeChar < 3){
+                    document.getElementById('botaoTeste').style.background = 'red'
+                }
+
+                if(quantidadeChar >= 3){
+                    document.getElementById('botaoTeste').style.background = 
+                    'green'
+                }
+                
+
+            }
+        </script>
+    </head>
+    <body>
+        <span style="font-size: 25px;">Digite o código do cartão:</span>
+        <input type="text" onfocus="botaoFocado()" onblur="botaoDesfocado()" id="botaoTeste">
+        <div style="background-color: antiquewhite;">''O código do cartão deve conter 3 caracteres''</div>
+    </body>
+</html>
