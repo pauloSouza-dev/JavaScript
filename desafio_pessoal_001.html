@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lâmpada</title>
+        <script>
+            
+            function acenderLampada(){
+                document.getElementById('lamp').src = 'img/lampada-on.jpg' 
+            }
+            
+            function apagarLampada(){
+                document.getElementById('lamp').src = 'img/lampada.jpg' 
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>CONCLUÍDO</h1>
+        <img id="lamp"  onmouseover="acenderLampada()" style="margin-left: 400px;" src="img/lampada.jpg">
+    </body>
+</html>
