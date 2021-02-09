@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BOM</title>
+        <script>
+            var janela 
+            function openWindow(){
+                janela = window.open('http://www.google.com','nova_janela')
+            }
+
+            function closeWindow(){
+                janela.close()
+            }
+        </script>
+    </head>
+    <body>
+       <button onclick="openWindow()" >Abrir Janela</button>
+       <button onclick="closeWindow()" >Fechar Janela</button>
+       
+       <button onclick="window.print()">Imprimir Janela</button>
+    </body>
+</html>
