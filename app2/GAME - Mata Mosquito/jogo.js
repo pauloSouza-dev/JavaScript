@@ -1,5 +1,19 @@
 var altura = 0
 var largura = 0
+var vidas = 1
+var tempo = 15
+var tempoSurgimentoMosca = 1500
+
+var nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+if(nivel === 'normal'){
+    tempoSurgimentoMosca = 1500
+}else if(nivel === 'dificil'){
+    tempoSurgimentoMosca = 1000
+}else if(nivel === 'chucknorris'){
+    tempoSurgimentoMosca = 750
+}
 
 function ajustaTamanhoPalcoJogo(){
     altura = window.innerHeight
@@ -8,12 +22,36 @@ function ajustaTamanhoPalcoJogo(){
     console.log(largura,altura)
 }
 
+var cronometro = setInterval(function(){
+    tempo -= 1
+
+    if(tempo < 0){
+        clearInterval(cronometro)
+        clearInterval(croMosca)
+        window.location.href = 'vitoria.html'
+    }
+    else{
+        document.getElementById('cronometro').innerHTML = tempo
+    }
+    
+
+}, 1000)
+
 ajustaTamanhoPalcoJogo()
 
 function posicaoRandomica(){
 
     if(document.getElementById('mosca')){
         document.getElementById('mosca').remove()
+        if(vidas > 3){
+            
+            window.location.href = 'fim_de_jogo.html'
+
+        }else{
+            document.getElementById('v'+vidas).src = 'imagens/coracao_vazio.png'
+
+            vidas++
+        }
     }
 
     var posicaoX = Math.floor(Math.random() * largura) - 90
@@ -32,6 +70,9 @@ function posicaoRandomica(){
     mosca.style.top = posicaoY + 'px'
     mosca.style.position = 'absolute'
     mosca.id = 'mosca'
+    mosca.onclick = function(){
+        this.remove()
+    }
 
     document.body.appendChild(mosca)
     
